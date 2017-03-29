@@ -46,7 +46,8 @@ Resources:
   LambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: handler.lambda_handler
+      FunctionName: SungardAS-Account
+      Handler: index.handler
       Runtime: python2.7
       CodeUri: ./src
       Role: !GetAtt LambdaFunctionIAMRole.Arn

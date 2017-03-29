@@ -61,7 +61,8 @@ headers: {
 data:
 {
   name: "<account_name>",
-  email: "<account_email_address>"
+  email: "<account_email_address>",
+  checkStatus: true/false
 }
 ```
 
