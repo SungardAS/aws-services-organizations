@@ -134,7 +134,7 @@ function checkCreationStatus(organizations, input, callback) {
         checkCreationStatus(organizations, input, callback);
       }
       else if (data.CreateAccountStatus.State == "SUCCEEDED") {
-        callback(null, true);
+        callback(null, data);
       }
       else {
         callback("creation failed");
