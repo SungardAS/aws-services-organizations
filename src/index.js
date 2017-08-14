@@ -133,11 +133,8 @@ function checkCreationStatus(organizations, input, callback) {
         sleep.sleep(5); //sleep for 5 seconds
         checkCreationStatus(organizations, input, callback);
       }
-      else if (data.CreateAccountStatus.State == "SUCCEEDED") {
-        callback(null, data);
-      }
       else {
-        callback("creation failed");
+        callback(null, data);
       }
     }
   });
