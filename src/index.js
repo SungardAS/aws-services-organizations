@@ -79,7 +79,7 @@ baseHandler.post = function(params, callback) {
     //IamUserAccessToBilling: 'ALLOW | DENY',
     //RoleName: 'STRING_VALUE'
   };
-  var organizations = new AWS.Organizations({region: process.env.AWS_DEFAULT_REGION, credentials:credentials});
+  var organizations = new AWS.Organizations({region: process.env.REGION, credentials:credentials});
   organizations.createAccount(input, function(err, data) {
     if (err) {
       console.log(err, err.stack);
