@@ -2,6 +2,12 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Lambda Function to call the Organization API Interfaces
 
+Parameters:
+  OrganizationRegion:
+    Type: String
+    Default: "us-east-1"
+    Description: The AWS region endpoint for AWS Organizations service
+
 Resources:
   ApiGatewayApi:
     Type: AWS::Serverless::Api
@@ -59,6 +65,9 @@ Resources:
             RestApiId: !Ref ApiGatewayApi
             Path: /{proxy+}
             Method: ANY
+      Environment:
+        Variables:
+          REGION: !Ref OrganizationRegion
 
 Outputs:
   APIURL:
