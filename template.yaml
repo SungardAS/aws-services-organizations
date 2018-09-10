@@ -54,7 +54,7 @@ Resources:
     Properties:
       FunctionName: SungardAS-Account
       Handler: index.handler
-      Runtime: nodejs4.3
+      Runtime: nodejs8.10
       CodeUri: ./src
       Role: !GetAtt LambdaFunctionIAMRole.Arn
       Timeout: 60

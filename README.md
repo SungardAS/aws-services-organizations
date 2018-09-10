@@ -98,7 +98,7 @@ Input Parameter Values
 
 - ParameterOverrides:
 
-- ProjectImage: `aws/codebuild/nodejs:4.3.2`
+- ProjectImage: `aws/codebuild/nodejs:8.11.0`
 
 ## How To Test Lambda Functions
 
